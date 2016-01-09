@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Social Github",
+  "version": "0.1",
+  "description": "A helpful tool to show the associated information with your friends on github.com",
+  "browser_action": {
+    "default_icon": "assets/icon.png",
+    "default_title": "Social Github"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": [],
+      "js": ["inject.js"]
+    }
+  ],
+  "permissions": [
+    "https://api.github.com/"
+  ]
+}
